@@ -1,0 +1,86 @@
+Last login: Mon Feb  5 12:32:39 on ttys001
+jacobui-mbp:PetStore jacob$ echo .gitignore >myfile.txt
+jacobui-mbp:PetStore jacob$ git init
+Initialized empty Git repository in /Users/jacob/PetStore/.git/
+jacobui-mbp:PetStore jacob$ git add .
+jacobui-mbp:PetStore jacob$ git commit -a -m
+error: switch `m' requires a value
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+jacobui-mbp:PetStore jacob$ git remote add origin https://github.com/jacobbaik/PetStore.git
+jacobui-mbp:PetStore jacob$ git remote -v
+origin	https://github.com/jacobbaik/PetStore.git (fetch)
+origin	https://github.com/jacobbaik/PetStore.git (push)
+jacobui-mbp:PetStore jacob$ git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/jacobbaik/PetStore.git'
+jacobui-mbp:PetStore jacob$ echo "# PetStore" >> README.md
+jacobui-mbp:PetStore jacob$ git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/jacobbaik/PetStore.git
+git push -u origin master
+Reinitialized existing Git repository in /Users/jacob/PetStore/.git/
+jacobui-mbp:PetStore jacob$ git add README.md
+jacobui-mbp:PetStore jacob$ git commit -m "first commit"
+[master (root-commit) 2d78656] first commit
+ 8 files changed, 265 insertions(+)
+ create mode 100644 README.md
+ create mode 100755 build.xml
+ create mode 100755 build/classes/Pet.class
+ create mode 100755 build/classes/PetStore.class
+ create mode 100755 manifest.mf
+ create mode 100644 myfile.txt
+ create mode 100755 src/Pet.java
+ create mode 100755 src/PetStore.java
+jacobui-mbp:PetStore jacob$ git remote add origin https://github.com/jacobbaik/PetStore.git
+fatal: remote origin already exists.
+jacobui-mbp:PetStore jacob$ git push -u origin master
+Username for 'https://github.com': git remote add origin https://github.com/jacobbaik/PetStore.git
+git push -u origin masterPassword for 'https://git remote add origin https://github.com/jacobbaik/PetStore.git@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/jacobbaik/PetStore.git/'
+jacobui-mbp:PetStore jacob$ 
